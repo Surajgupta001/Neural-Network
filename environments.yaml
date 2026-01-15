@@ -1,4 +1,5 @@
 name: nn_env
+
 channels:
   - pytorch
   - conda-forge
@@ -6,25 +7,17 @@ channels:
 
 dependencies:
   - python=3.10
-
-  # Core scientific stack
+  - pip
   - numpy
   - pandas
-  - scipy
   - matplotlib
-  - seaborn
   - scikit-learn
 
-  # Deep Learning
-  - tensorflow
-  - keras
+  # PyTorch via conda (stable on Windows)
   - pytorch
   - torchvision
   - torchaudio
 
-  # CPU only (remove if using GPU)
-  - cpuonly
-
-  # Dev / Experiments
-  - jupyter
-  - ipykernel
+  # pip-only packages
+  - pip:
+      - nnfs
